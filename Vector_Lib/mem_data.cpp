@@ -205,6 +205,19 @@ void quick_sort_recursive(vector_type* data, int left, int right) {
 		quick_sort_recursive(data, pivot_index, right);
 	}
 }
+template <typename vector_type>
+void MemData<vector_type>::shrink_to_fit() {
+	if (_capacity == _size) {
+		return;
+	}
+	if (_size == 0) {
+		clear_memory();
+		_capacity = 0;
+		return;
+	}
+	reset_memory(_size);
+	_capacity = _size;
+}
 
 //инстанцирование шаблона (генерация объектного файла под определенный тд):
 template class MemData<double>;

@@ -329,7 +329,10 @@ std::istream& operator>> (std::istream& in, Vector<vector_type>& vector) {			// 
 	vector = std::move(temp);
 	return in;
 };
-
+template <typename vector_type>
+void Vector<vector_type>::shrink_to_fit() {
+	_mem.shrink_to_fit();
+}
 //инстанцирование шаблона (генерация объектного файла под определенный тд):
 template class Vector<double>;
 template std::ostream& operator<< (std::ostream& out, const Vector<double>& v1);

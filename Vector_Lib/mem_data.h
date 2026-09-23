@@ -60,6 +60,8 @@ public:
         }
     }
 
+    void shrink_to_fit();
+
     //операторы
     MemData& operator=(const MemData&) noexcept;         // присваивания
     MemData& operator=(MemData&&) noexcept;              // присваивания с move-семантикой

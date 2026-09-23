@@ -110,6 +110,7 @@ public:
 	template <typename vector_type>
 	friend void shuffle(Vector<vector_type>&);	//перемешивания (Фишер-Йетса)
 
+	void shrink_to_fit();
 private:
 	//служебный метод получения (геттер) физического индекса по относительному
 	inline size_t get_mem_index(size_t i) const {
