@@ -317,7 +317,7 @@ std::ostream& operator<< (std::ostream& out, const Vector<vector_type>& vector) 
 	}
 	out << " }";
 	return out;
-};
+}
 template <typename vector_type>
 std::istream& operator>> (std::istream& in, Vector<vector_type>& vector) {			// ввода
 	Vector<vector_type> temp;
@@ -328,7 +328,7 @@ std::istream& operator>> (std::istream& in, Vector<vector_type>& vector) {			// 
 	}
 	vector = std::move(temp);
 	return in;
-};
+}
 template <typename vector_type>
 void Vector<vector_type>::shrink_to_fit() {
 	_mem.shrink_to_fit();

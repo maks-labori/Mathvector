@@ -26,8 +26,15 @@ MemData<vector_type>::MemData(const vector_type* array, size_t size) {		//инициа
 	_size = size;
 	_data = nullptr;
 	set_memory(_size);
-	for (size_t i = 0; i < _size; i++) {
-		_data[i] = array[i];
+	if (array) {
+		for (size_t i = 0; i < _size; i++) {
+			_data[i] = array[i];
+		}
+	}
+	else {
+		for (size_t i = 0; i < _size; i++) {
+			_data[i] = vector_type();
+		}
 	}
 }
 template <typename vector_type>

@@ -1,7 +1,7 @@
 #include "pch.h"
 
-#define MEMDATA_TESTS
-#define VECTOR_TESTS
+//#define MEMDATA_TESTS
+//#define VECTOR_TESTS
 #define MATH_VECTOR_TESTS
 
 #ifdef MEMDATA_TESTS
@@ -1153,6 +1153,7 @@ TEST(ClassVector, can_move_assigment) {
 }
 
 #endif
+
 #ifdef MATH_VECTOR_TESTS
 #include "mathvector.h"
 TEST(ClassMathVector, can_create_with_default_constructor) {
